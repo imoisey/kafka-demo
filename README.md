@@ -13,4 +13,11 @@
 
 * ```make up``` - запуск Zookeeper & Kafka.
 * ```make down``` - остановка Zookeeper & Kafka.
-* ```make restart``` - перезапуск Zookeeper & Kafka. 
+* ```make restart``` - перезапуск Zookeeper & Kafka.
+
+## Демо-команды
+
+* ```make create-demo-topic``` - создает **demo** топик в Kafka.
+* ```make describe-demo-topic``` - возвращает информацию о топике **demo**.
+* ```make producer-demo-run``` - запускает producer для записи сообщений в топик **demo**.
+* ```make consumer-demo-run``` - запускает consumer для чтения сообщений из топика **demo**.  
