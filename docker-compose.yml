@@ -17,3 +17,7 @@ services:
       KAFKA_LISTENERS: PLAINTEXT://:9092
     volumes:
       - ./bin:/demo/bin
+
+networks:
+  default:
+    name: kafka_demo
