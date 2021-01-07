@@ -1,0 +1,8 @@
+{
+  "require": {
+    "nmred/kafka-php": "0.2.*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  }
+}

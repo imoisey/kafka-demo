@@ -1,6 +1,10 @@
 up: docker-up
 down: docker-down
 restart: docker-down docker-up
+build: php-build
+
+docker-build:
+	@docker build -t kafka-php-cli:latest -f php/docker/php-cli/Dockerfile php/docker
 
 docker-up:
 	@docker-compose up -d
@@ -22,3 +26,8 @@ producer-demo-run:
 
 consumer-demo-run:
 	@docker-compose exec kafka /demo/bin/consumer-demo-run.sh
+
+php-build: docker-build php-composer-install
+
+php-composer-install:
+	@docker run -it --rm --network kafka_demo -v ${PWD}/php:/app -w /app kafka-php-cli:latest composer install
