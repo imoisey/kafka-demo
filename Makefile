@@ -31,3 +31,9 @@ php-build: docker-build php-composer-install
 
 php-composer-install:
 	@docker run -it --rm --network kafka_demo -v ${PWD}/php:/app -w /app kafka-php-cli:latest composer install
+
+php-producer:
+	@docker run -it --rm --network kafka_demo -v ${PWD}/php:/app -w /app kafka-php-cli:latest php src/producer.php
+
+php-consumer:
+	@docker run -it --rm --network kafka_demo -v ${PWD}/php:/app -w /app kafka-php-cli:latest php src/consumer.php
