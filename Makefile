@@ -37,3 +37,8 @@ php-producer:
 
 php-consumer:
 	@docker run -it --rm --network kafka_demo -v ${PWD}/php:/app -w /app kafka-php-cli:latest php src/consumer.php
+
+stop-php:
+	@docker stop ${PHP_CONTAINERS}
+
+PHP_CONTAINERS := $(shell docker ps -aq -f ancestor=kafka-php-cli:latest)
