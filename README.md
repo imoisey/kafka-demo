@@ -22,7 +22,12 @@
 * ```make producer-demo-run``` - запускает producer для записи сообщений в топик **demo**.
 * ```make consumer-demo-run``` - запускает consumer для чтения сообщений из топика **demo**.
 
-## PHP библиотеки
+## PHP демо
+
+* ```make php-producer``` - пример php-producer, который пишет в топик **demo**.
+* ```make php-consumer``` - пример php-consumer, который читает из топика **demo**.
+
+### Библиотеки
 
 * [https://github.com/weiboad/kafka-php](https://github.com/weiboad/kafka-php)
 * [https://github.com/arnaud-lb/php-rdkafka](https://github.com/arnaud-lb/php-rdkafka) - ext-rdkafka.
